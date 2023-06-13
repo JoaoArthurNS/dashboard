@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENDO - Seu Gerenciador Pessoal</title>
+  <link rel="stylesheet" href="paginaInicial.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>ZEN<span class="title">DO</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <h3>Home</h3>
+                </a>
+                <a href="dashboard.html">
+                    <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="battery-charging-outline"></ion-icon></span>
+                    <h3>Anti-stress</h3>
+                </a>
+                <a href="#">
+                    <span><ion-icon name="calendar-number-outline"></ion-icon></span>                    <h3>Lembretes</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                    <h3>Notas</h3>
+                </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="alarm-outline"></ion-icon></span>
+                    <h3>Pomodoro</h3>
+                </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="cloud-upload-outline"></ion-icon></span>
+                    <h3>Upgrades</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Configurações</h3>
+                </a>
+                <a href="#">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <h3>Log Out</h3>
+                </a>
+            </div>
+        </aside>
+        <!------------------ END OF ASIDE--------------->
+        <main>
+            <h1>Home</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+                <!--END OF SALES-->
+                <div class="income">
+                    <div class="middle">
+                        <div class="left">
+                            <h1>Olá, Isabella!</h1>
+                            <h3>É bom ter você aqui.</h3>
+                            <div class="input-section">
+                                <h2>Deseja fazer alguma anotação hoje?</h2>
+                              </div>
+                              <div class="input-input">
+                                <input type="text" placeholder="Digite sua anotação aqui">
+                                <button>Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--END OF SALES-->
+            </div>
+            <!-----------END OF INSIGHTS------------>
+            <div class="recent-orders">
+                <h2>Tarefas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Número</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Estudar Matemática</td>
+                            <td>44</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Estudar Física</td>
+                            <td>85631</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Estudar Português</td>
+                            <td>85631</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Resolver o erro no código</td>
+                            <td>85631</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Estudar Química</td>
+                            <td>82</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Ler o livro "A seleção"</td>
+                            <td>85631</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+            <div class="recent-grafics">
+                <div id="donut_single" style="width: 900px; height: 500px;"></div>
+                <div id="donut" style="width: 900px; height: 500px;"></div>
+            </div>
+        </main>
+        <!-----------END OF MAIN----------->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp">light_mode</span>
+                    <span class="material-icons-sharp active">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Isabella</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="twitter.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--END OF TOP-->
+            <div class="recent-updates">
+                <h2>Últimas atualizações</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="instagram.png" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Mike Tyson</b> received this order of
+                            Night lion tech GPS drone</p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="instagram.png" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Mike Tyson</b> received this order of
+                            Night lion tech GPS drone</p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="instagram.png" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Mike Tyson</b> received this order of
+                            Night lion tech GPS drone</p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END OF RECENT UPDATES-->
+            <div class="sales-analytics">
+                <h2>Últimos lembretes</h2>
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-icons-sharp">local_mall</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>LEMBRAR DE DORMIR</h3>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                    </div>
+                </div>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-icons-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>FAZER COMPRA DE CASA</h3>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                    </div>
+                </div>
+                <div class="item customers">
+                    <div class="icon">
+                        <span class="material-icons-sharp">person</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>ARRUMAR A CASA</h3>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <h5 class="success">+25%</h5>
+                    </div>
+                </div>
+                <div class="item add-product">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                        <h3>Add Lembrete</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------SCRIPTS------->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./dashboard.js"></script>
+</body>
+</html>
