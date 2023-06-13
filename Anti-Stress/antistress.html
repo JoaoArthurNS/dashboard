@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Botão Anti-Stress</title>
+    <style>
+        /* Estilos para a bola no canto da tela */
+        :root{
+            --color-light: rgba(0, 0, 0, 0.7);
+            --box-shadow: 0 2rem 3rem var(--color-light);
+        }
+        .button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        /* Estilos para a modal */
+        .modal-dialog {
+            max-width: 800px; /* Largura máxima da modal */
+            margin: 1.75rem auto; /* Centralizar a modal na tela */
+        }
+
+        .modal-content {
+            width: 100%; /* Definir a largura da modal como 100% */
+        }
+
+        .modal-title{
+            color: rgb(3, 172, 3);
+        }
+
+        .modal-body {
+            position: relative;
+            padding: 0; /* Remover o padding interno do corpo da modal */
+            height: 0;
+            padding-bottom: 56.25%; /* Proporção de 16:9 para manter a proporção do vídeo */
+            overflow: hidden;
+            background: #181a1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-body ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 400px;
+        }
+
+        .modal-body li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            color: #fff;
+        }
+
+        .modal-list{
+            width: 120px;
+            padding: 20px;
+            background: rgb(3, 172, 3);
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .modal-body iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .close-video {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="button" data-toggle="modal" data-target="#optionsModal"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="optionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="optionsModalLabel">Opções Anti-Stress</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <div class="modal-list"><li onclick="playMusic('jfKfPfyJRdk')">Música</li></div>
+                        <div class="modal-list"><li onclick="playPlaylist('PL39t2B92wpzmEd3lfJ8_j9Y_YvwYJjliw')">Alongamentos</li></div>
+                        <div class="modal-list"><li onclick="playPlaylist('PL39t2B92wpzmdEq5cnWzKZajo_dCxSY5D')">Respiração</li></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // Função para reproduzir a música do YouTube
+        function playMusic(videoId) {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+            iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowfullscreen = true;
+
+            var modalBody = document.querySelector('.modal-body');
+            modalBody.innerHTML = '';
+            modalBody.appendChild(iframe);
+
+            var closeBtn = document.createElement('span');
+            closeBtn.innerHTML = '&times;';
+            closeBtn.className = 'close-video';
+            closeBtn.addEventListener('click', function() {
+                modalBody.innerHTML = '';
+                showOptions();
+            });
+
+            modalBody.appendChild(closeBtn);
+        }
+
+        // Função para reproduzir a lista de reprodução do YouTube
+        function playPlaylist(playlistId) {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/videoseries?list=' + playlistId + '&autoplay=1';
+            iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowfullscreen = true;
+
+            var modalBody = document.querySelector('.modal-body');
+            modalBody.innerHTML = '';
+            modalBody.appendChild(iframe);
+
+            var closeBtn = document.createElement('span');
+            closeBtn.innerHTML = '&times;';
+            closeBtn.className = 'close-video';
+            closeBtn.addEventListener('click', function() {
+                modalBody.innerHTML = '';
+                showOptions();
+            });
+
+            modalBody.appendChild(closeBtn);
+        }
+
+        // Função para exibir as opções novamente
+        function showOptions() {
+            var modalBody = document.querySelector('.modal-body');
+            modalBody.innerHTML = '<ul><li onclick="playMusic(\'jfKfPfyJRdk\')">Opção 1 - Reproduzir Música</li><li onclick="playPlaylist(\'PL39t2B92wpzmEd3lfJ8_j9Y_YvwYJjliw\')">Opção 2 - Alongamentos</li><li onclick="playPlaylist(\'PL39t2B92wpzmdEq5cnWzKZajo_dCxSY5D\')">Opção 3 - Respiração</li></ul>';
+        }
+    </script>
+</body>    
+
+</html>
