@@ -29,7 +29,7 @@
 
 .dark-theme-variables{
     --color-background: #e7e7e7;
-    --color-white: #fff;
+    --color-white: #d8d4d4;
     --color-text: #2c2c2c;
     --color-light: rgba(132, 139, 200, 0.5);
 
@@ -363,7 +363,7 @@ main .recent-orders table:hover{
 main table tbody td{
     height: 2.8rem;
     border-bottom: 1px solid var(--color-light);
-    color: black;
+    color: var(--color-text);
 }
 
 main table tbody tr:last-child td{
