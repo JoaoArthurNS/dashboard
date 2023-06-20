@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap');
 
 :root{
-    --color-primary: rgb(3, 172, 3);
-    --color-secundary: #3a6324;
+    --color-primary: #96ba93;
+    --color-secundary:  #567356;
     --color-danger: #ff7782;
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
@@ -29,7 +29,7 @@
 
 .dark-theme-variables{
     --color-background: #e7e7e7;
-    --color-white: #d8d4d4;
+    --color-white: #fff;
     --color-text: #2c2c2c;
     --color-light: rgba(132, 139, 200, 0.5);
 
@@ -132,6 +132,7 @@ b{
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
 }
+
 aside{
     height: 100vh;
 }
@@ -363,7 +364,7 @@ main .recent-orders table:hover{
 main table tbody td{
     height: 2.8rem;
     border-bottom: 1px solid var(--color-light);
-    color: var(--color-text);
+    color: black;
 }
 
 main table tbody tr:last-child td{
@@ -592,7 +593,7 @@ main .recent-orders a{
     aside{
         position: fixed;
         left: -100%;
-        background: white;
+        background: var(--color-background);
         width: 18rem;
         z-index: 3;
         box-shadow: 1rem 3rem 4rem var(--color-light);
@@ -662,7 +663,7 @@ main .recent-orders a{
         left: 0;
         align-items: center;
         padding: 0 0.8rem;
-        background: white;
+        background: var(--color-background);
         height: 4.6rem;
         width: 100%;
         margin: 0;
